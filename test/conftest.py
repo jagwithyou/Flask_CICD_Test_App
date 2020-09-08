@@ -20,7 +20,7 @@ def setup(request):
     #Getting the driver name and instantiating the driver
     browser_name=request.config.getoption("browser_name")
     if browser_name == "chrome":
-        driver = webdriver.Chrome(executable_path=f"{config.DRIVER_PATH}\chromedriver")
+        driver = webdriver.Chrome(executable_path=f"{config.DRIVER_PATH}/chromedriver")
     elif browser_name == "firefox":
         driver = webdriver.Firefox(executable_path=f"{config.DRIVER_PATH}\geckodriver.exe")
     elif browser_name == "IE":
